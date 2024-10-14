@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .card-list-ferrari {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    /*flex-wrap: wrap;
+    justify-content: space-between;*/
+    gap: 70px;
+    padding: 20px; 
+  }
+
+  .ferraris {
+    padding: 20px;
+    background: linear-gradient(to bottom, rgb(150, 10, 10) 0%, rgba(255, 0, 0, 0) 50%), /* Top effect */
+                linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, rgb(150, 10, 10) 100%); /* Bottom effect */
+  }
+  
+  .title-cards-ferrari {
+    flex: 1 1 calc(25% - 40px); /* Makes cards 4 per row with space for margins */
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /*     max-width: 301px;/* Optional: Set a max width to limit card size*/
+    margin-top: 63px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .title-cards-ferrari:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: 1s linear ease-in-out;
+  }
+  
+  .title-cards-img-ferrari {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+  }
+  
+  .title-cards-info-ferrari {
+    padding: 12px;
+    background-color: #fff;
+  }
+  
+  .title-cards-info-ferrari h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  
+  .title-cards-info-ferrari p {
+    font-family: "Bona Nova SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    color: #666;
+  }
+  
+  /* Mobile-friendly adjustments */
+  @media (max-width: 500px) {
+    .ferraris h2 {
+      font-size: 32px;
+    }
+
+    .title-cards-info-ferrari {
+      height: 90px;
+    }
+  
+    .title-cards-info-ferrari h3 {
+      font-size: 15px;
+    }
+  
+    .title-cards-info-ferrari p {
+      font-size: 15px;
+    }
+  
+    .title-cards-img-ferrari {
+      height: 250px;
+    }
+
+      .rallye-title-cards h2{
+         font-size: 15px;
+      } 
+      .rallye-title-cards-img {
+        width: auto;
+  
+      }
+      .card-list p{
+         font-size: 10px;
+      }
+  }
+  

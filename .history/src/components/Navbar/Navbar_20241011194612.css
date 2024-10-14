@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Open+Sans&display=swap');
+
+.navbar {
+    width: 100%;
+    padding: 13px 1.5%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    font-size: 29px;
+    color: #e5e5e5;
+    z-index: 1;
+    transition: background-color, 0.3s, color 0.3s;
+}
+
+.navbar-left .logo-img {
+    height: 61px;
+    width: 140px;
+}
+
+.dark-mode {
+    background-color: black;
+}
+
+     /* NAVBAR LIGHT-MODE */
+    .light-mode {
+        background-color: whitesmoke; 
+        color: #2c2c2c; 
+    }     
+    .light-mode .navbar .dropdown {
+        color: #fffefe;
+    }
+    .light-mode .navbar-left ul li:hover{
+        color: black;
+        font-size: 31px;
+    }
+    .navbar.light-mode {
+        background-color: whitesmoke; 
+    }
+    .light-mode .navbar-right .dropdown p{
+        color: whitesmoke;
+        text-decoration: underline;
+        font-size: 17px;
+    }  
+
+
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-left img {
+    width: 140px;
+    height: 61px;
+    /* src={logo} alt="Logo" */
+}
+
+.navbar-left ul {
+    display: flex;
+    list-style: none;
+    gap: 44px;
+}
+
+.navbar-left ul li{
+    cursor: pointer;
+    transition: font-size 0.1s ease-in, color 0.1s ease-in;
+    font-family: "Bona Nova SC", serif;
+}
+
+.link-style {
+    color: inherit; /* Inherits the color from the parent element */
+    text-decoration: none;
+}
+
+.navbar-left ul li:hover{
+    color: white;
+    font-size: 35px;
+}
+
+/* NAVBAR-RIGHT */
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* START - DARK MODE BUTTON */
+.navbar-right .dark-mode-btn{
+    background: none; 
+    border: none;  
+    padding: 0; 
+    margin: 0; 
+    color: inherit; 
+    font: inherit; 
+    cursor: pointer; 
+}
+
+.navbar-right .dark-mode-btn {
+  color: whitesmoke; 
+  background-color: #141414;
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  font-size: 16px; 
+  font-weight: 700;
+  border: 1px solid red;
+  position: relative;
+}
+
+.navbar-right .dark-mode-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Adjust to position */
+    left: -2px; /* Adjust to position */
+    right: -2px; /* Adjust to position */
+    bottom: -2px; /* Adjust to position */
+    border: 2px solid red; /* First border color */
+    border-radius: 5px; /* Match border radius */
+    z-index: 0; /* Position it below */
+}
+
+.navbar-right .dark-mode-btn::after {
+    content: '';
+    position: absolute;
+    top: -4px; /* Adjust to position */
+    left: -4px; /* Adjust to position */
+    right: -4px; /* Adjust to position */
+    bottom: -4px; /* Adjust to position */
+    border: 2px solid blue; /* First border color */
+    border-radius: 7px; /* Match border radius */
+    z-index: -1; /* Position it below */
+}  
+
+/* END - NAV DARK MODE BUTTON */
+
+.navbar-right .icons {
+    width: 20px;
+    cursor: pointer;
+}
+
+.navbar-right .profile {
+    border-radius: 4px;
+    border: 1px solid white; 
+    width: 40px;
+    filter: brightness(1.9);
+}
+
+.navbar-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.navbar .dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: max-content;
+  background: #191919;
+  padding: 18px 22px;
+  border-radius: 2px;
+  text-decoration: underline;
+  z-index: 1;
+  display: none;
+}
+
+.navbar .dropdown p{
+    font-size: 13px;
+    cursor: pointer;
+    font-family: "Bona Nova SC", serif;
+}
+
+.navbar-profile:hover .dropdown{
+    display: block;
+}
+
+.nav-dark {
+    background: #141414;
+}
+
+.navbar-right p{
+    font-family: "Bona Nova SC", serif;
+    font-weight: 300;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .navbar {
+        font-size: 29px; /* Default font size for large devices */
+    }
+
+    .navbar-left ul {
+        gap: 44px; /* Maintain larger gap */
+    }
+
+    .navbar-left img {
+        width: 140px;
+        height: 61px;
+    }
+}
+
+/* Medium devices (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .navbar {
+        font-size: 24px; /* Slightly smaller font size */
+    }
+
+    .navbar-left ul {
+        gap: 30px; /* Reduce gap */
+    }
+
+    .navbar-left img {
+        width: 120px; /* Smaller logo */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Small devices (phones, up to 767px) */
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        font-size: 21px; /* Smaller font size */
+        letter-spacing: 5px;
+        max-height: 50pxpx;
+
+    }
+
+    .navbar-left .logo-img {
+        height: 0px;
+        width: 0px;
+    }
+
+    .navbar-left {
+        padding-left: 0px;
+    }
+
+    .navbar-left ul li:hover{
+        color: white;
+        font-size: 22px;
+    }
+
+    .navbar-left img{
+        visibility: hidden;
+        width: 100px;
+        height: 100px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .navbar-left ul {
+        flex-direction: column; /* Stack menu items */
+        gap: 6px; /* Smaller gap between items */
+        align-items: center; /* Center items */
+    }
+
+    .navbar-right {
+        visibility: hidden;
+    }
+}

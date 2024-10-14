@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .title-cards-container { 
+    background: none;
+    background: linear-gradient(to bottom, rgb(30, 28, 140) 0%, rgba(0, 0, 0, 0) 50%), 
+    linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgb(30, 28, 140) 100%); 
+    padding: 20px;
+    display: flex;
+  }
+  
+  /* Flex container for cards */
+  .cards {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: end; 
+    gap: 20px; 
+    padding: 20px;
+    margin-top: 100px;
+  }
+  
+  /* Flex container for video cards */
+  .video-cards {
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    gap: 70px;
+  }
+  
+  /* Styling for each card */
+  .card {
+    width: auto; 
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    opacity: 1; /* Full opacity for the card */
+    background: transparent;
+  }
+  
+  /* Thumbnail image styling */
+  .video-thumbnail {
+    width: 450px; 
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; 
+    filter: brightness(1.1);
+    opacity: 1;
+  }
+  
+  .video-thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    filter: brightness(1.2);
+  }
+  
+  /* Card title styling */
+  .card h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Modal overlay when a video is selected */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal content container */
+  .modal-content {
+    background: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+  }
+  
+  /* Embedded video iframe */
+  .modal-content iframe {
+    width: 100%;
+    height: 500px;
+  }
+  
+  .modal-overlay:hover {
+    cursor: pointer;
+  }
+  
+  .modal-content:hover {
+    cursor: default;
+  }
+  
+  /* Scrollbar styling (hidden for horizontal scroll) */
+  .card-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Responsive styling for smaller screens */
+  @media (max-width: 800px) {
+    .cards {
+      gap: 10px; /* Reduce the gap between cards */
+    }
+  
+    .card {
+      width: 200px; /* Reduce card width for smaller screens */
+    }
+  
+    .card h3 {
+      font-size: 16px; /* Reduce font size for titles */
+    }
+  
+    .thumbnail {
+      width: 100%; /* Ensure thumbnail adjusts to the new card size */
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      width: 165px; /* Further reduce card width for small screens */
+    }
+  
+    .card h3 {
+      font-size: 14px;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 7px;
+      border-radius: 10px;
+      width: 80%;
+    }
+  
+    .video-thumbnail {
+      width: 100%;
+    }
+  }

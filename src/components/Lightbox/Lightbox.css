@@ -1,0 +1,82 @@
+/* Lightbox.css */
+
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .lightbox-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lightbox-img {
+    max-width: 100%;
+    max-height: 70vh;
+    border-radius: 8px;
+  }
+  
+  .lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .left {
+    left: 20px;
+  }
+  
+  .right {
+    right: 20px;
+  }
+  
+  .lightbox-thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  
+  .thumbnail.active {
+    opacity: 1;
+    border: 2px solid white;
+  }
+  
+  .lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
